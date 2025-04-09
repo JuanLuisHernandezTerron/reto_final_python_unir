@@ -4,6 +4,8 @@ from app import create_app, db
 from app.models import Data
 
 env_name = os.getenv("FLASK_ENV", "development")
+print(env_name, flush=True)
+
 app = create_app(env_name)
 
 with app.app_context():
