@@ -7,7 +7,7 @@ db = SQLAlchemy()
 
 def create_app(config_name):
     app = Flask(__name__)
-    print(config_name, flush=True)
+    print(f" este es el config name {config_name}", flush=True)
     app.config.from_object(config_dict[config_name])
 
     # Initialize the database
