@@ -3,8 +3,7 @@ import os
 from app import create_app, db
 from app.models import Data
 
-#env_name = os.getenv("FLASK_ENV", "development")
-env_name = "development"
+env_name = os.getenv("FLASK_ENV", "development")
 print(f"==> ENV_NAME: {env_name}", flush=True) 
 
 app = create_app(env_name)
