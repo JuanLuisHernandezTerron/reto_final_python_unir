@@ -7,6 +7,7 @@ class Config:
 
     # Database configuration
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI")
+    print(SQLALCHEMY_DATABASE_URI)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Add other configuration variables as needed
