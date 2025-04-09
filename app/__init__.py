@@ -10,6 +10,7 @@ def create_app(config_name):
     app.config.from_object(config_dict[config_name])
 
     # Initialize the database
+    print(config_name)
     db.init_app(app)
 
     # Import blueprints/routes
