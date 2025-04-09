@@ -4,7 +4,8 @@ from app import create_app
 from app.config import config_dict
 
 
-env_name = os.getenv("FLASK_ENV", "development")
+#env_name = os.getenv("FLASK_ENV", "development")
+env_name = 'development'
 print(env_name)
 print(os.getenv("FLASK_ENV"))
 print(os.getenv("development"))
