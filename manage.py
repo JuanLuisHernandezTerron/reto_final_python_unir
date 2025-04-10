@@ -10,7 +10,7 @@ app = create_app(env_name)
 
 with app.app_context():
     db.create_all()
-
+    print("Entrando para crear las tablas")
     sample_data = Data(name="SQL Test User")
     db.session.add(sample_data)
     db.session.commit()
