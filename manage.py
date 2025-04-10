@@ -6,7 +6,15 @@ from app.models import Data
 env_name = os.getenv("FLASK_ENV", "development")
 print(f"==> ENV_NAME: {env_name}", flush=True) 
 
-app = create_app(env_name)
+#app = create_app(env_name)
+
+
+try:
+    app = create_app(env_name)
+    print("create_app se ejecutó sin errores", flush=True)
+except Exception as e:
+    print(f"Error en create_app: {e}", flush=True)
+    raise 
 
 with app.app_context():
     db.create_all()
