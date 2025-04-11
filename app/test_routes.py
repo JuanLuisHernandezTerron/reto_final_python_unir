@@ -15,8 +15,8 @@ def client():
     with app.app_context():
         db.drop_all()
         
-def test_insert_data():
-    payload = request.get_json()
+def test_insert_data(client):
+    payload = {'id':999,'name':'Jose'}
     response = client.post("/data", json=payload)
     assert response.status_code == 201
     assert response.json["message"] == "Data created"
