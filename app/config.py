@@ -20,13 +20,13 @@ class ProductionConfig(Config):
     DEBUG = False
     # Add other production configurations here
 
-class TestingConfig(Config):
-    TESTING = True
+# class TestingConfig(Config):
+#     TESTING = True
 
 # Dictionary to map environment names to configuration classes
 config_dict = {
     "development": DevelopmentConfig,
     "production": ProductionConfig,
-    "testing":TestingConfig
+    # "testing":TestingConfig
     # Add other environments if needed
 }
