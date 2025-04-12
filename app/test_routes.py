@@ -26,8 +26,8 @@ def test_get_data(client):
     response = client.get("/data")
     assert response.status_code == 200
 
-def test_insert_data(client):
-    response = client.post("/data/<int:id>")
+def test_delete_data(client):
+    client.post("/data", json={"name": "Aux"})
+    response = client.delete("/data/1")
     assert response.status_code == 200
     assert response.json["message"] == "Data deleted successfully"
-
