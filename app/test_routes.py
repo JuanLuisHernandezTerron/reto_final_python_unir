@@ -20,3 +20,14 @@ def test_insert_data(client):
     response = client.post("/data", json=payload)
     assert response.status_code == 200
     assert response.json["message"] == "Data inserted successfully"
+
+
+def test_get_data(client):
+    response = client.get("/data")
+    assert response.status_code == 200
+
+def test_insert_data(client):
+    response = client.post("/data/<int:id>")
+    assert response.status_code == 200
+    assert response.json["message"] == "Data deleted successfully"
+
