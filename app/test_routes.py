@@ -19,4 +19,4 @@ def test_insert_data(client):
     payload = {'id':999,'name':'Jose'}
     response = client.post("/data", json=payload)
     assert response.status_code == 200
-    assert response.json["message"] == "Data created"
+    assert response.json["message"] == "Data inserted successfully"
