@@ -27,6 +27,6 @@ class ProductionConfig(Config):
 config_dict = {
     "development": DevelopmentConfig,
     "production": ProductionConfig,
-    # "testing":TestingConfig
+    "testing":TestingConfig
     # Add other environments if needed
 }
